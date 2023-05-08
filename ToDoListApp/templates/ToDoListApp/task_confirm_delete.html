@@ -1,0 +1,13 @@
+{% extends 'ToDoListApp/main.html' %}
+
+{% block content %}
+
+    <h1>Delete task.</h1>
+    <a href="{% url 'tasks' %}"><- Go back</a>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <p>Are you sure you want to delete {{task}}?</p>
+        <input type="submit" value="Delete">
+    </form>
+
+{% endblock content %}

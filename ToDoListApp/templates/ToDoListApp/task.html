@@ -1,0 +1,12 @@
+{% extends 'ToDoListApp/main.html' %}
+
+{% block content %}
+
+    <div class="header-bar">
+        <h1>My To Do List</h1>
+        <a href="{% url 'tasks' %}"><- Go back</a>
+    </div>
+
+    <h2>Task: {{task.title}}</h2>
+
+{% endblock content %}
