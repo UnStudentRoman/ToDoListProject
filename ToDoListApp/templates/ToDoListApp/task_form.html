@@ -2,9 +2,12 @@
 
 {% block content %}
 
-    <h1>Create task form.</h1>
+<div class="header-bar">
+    <h1>Task</h1>
     <a href="{% url 'tasks' %}"><- Go back</a>
-    <form method="POST" action="">
+</div>
+
+    <form class="form-area" method="POST" action="">
         {% csrf_token %}
         {{form.as_p}}
         <input type="submit" value="Submit">

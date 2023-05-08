@@ -1,10 +1,12 @@
 {% extends 'ToDoListApp/main.html' %}
 
 {% block content %}
+<div class="header-bar">
+    <h1>Login</h1>
+</div>
 
-<h1>Login</h1>
 
-<form method="post">
+<form class="form-area" method="post">
     {% csrf_token %}
     {{form.as_p}}
     <input type='submit', value="Login">
